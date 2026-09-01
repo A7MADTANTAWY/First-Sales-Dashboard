@@ -1,0 +1,25 @@
+# Power BI (other formats)
+*.pbids
+*.pbit
+*.pbi/
+*.pbiviz
+*.pbiviz.json
+
+# Windows / OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE / Editor
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs & temp
+*.log
+node_modules/
+*.tmp
+*~
