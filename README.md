@@ -2,7 +2,7 @@
 
 An end-to-end **Power BI** sales dashboard built on a real supermarket transaction dataset. This project demonstrates the full data-analysis workflow — from raw CSV import and data modeling to interactive visualizations and a polished, professional dashboard report.
 
-![Dashboard Preview](Sales%20Dashboard_page-0001.jpg)
+![Dashboard Preview](docs/Sales%20Dashboard_page-0001.jpg)
 
 ---
 
@@ -71,9 +71,14 @@ The dataset is a widely-used public **Supermarket Sales** sample (3 months, 1,00
 
 ```
 First-Sales-Dashboard/
-├── Sales Dashboard.pbix              # Interactive Power BI report (editable)
-├── Sales Dashboard_page-0001.jpg     # Dashboard preview image
-└── supermarket_sales.csv             # Raw source data
+├── data/                             # Raw source data
+│   └── supermarket_sales.csv
+├── reports/                          # Interactive Power BI report (editable)
+│   └── Sales Dashboard.pbix
+├── docs/                             # Documentation & dashboard preview
+│   └── Sales Dashboard_page-0001.jpg
+├── README.md
+└── .gitignore
 ```
 
 ---
@@ -90,11 +95,11 @@ First-Sales-Dashboard/
    ```bash
    git clone https://github.com/<your-username>/First-Sales-Dashboard.git
    ```
-2. Open **`Sales Dashboard.pbix`** with Power BI Desktop.
+2. Open **`reports/Sales Dashboard.pbix`** with Power BI Desktop.
 3. The report and data model load automatically — no extra configuration needed.
 4. Interact with the visuals, or print/export to PDF.
 
-> Prefer a quick look? Open the **`Sales Dashboard_page-0001.jpg`** preview.
+> Prefer a quick look? Open the **`docs/Sales Dashboard_page-0001.jpg`** preview.
 
 ---
 
