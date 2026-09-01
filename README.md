@@ -1,118 +1,115 @@
-<div dir="rtl">
+# 🛒 Sales Dashboard — Supermarket Analysis
 
-# 🛒 داشبورد المبيعات — تحليل سوبر ماركت
+An end-to-end **Power BI** sales dashboard built on a real supermarket transaction dataset. This project demonstrates the full data-analysis workflow — from raw CSV import and data modeling to interactive visualizations and a polished, professional dashboard report that tells a clear business story.
 
-مشروع **Power BI** متكامل لتحليل مبيعات سوبر ماركت، مبني على بيانات معاملات حقيقية. يعرض المشروع مسار العمل الكامل لتحليل البيانات — من استيراد ملف CSV الخام وبناء نموذج البيانات، حتى التصورات التفاعلية وتقرير رسمي احترافي.
-
-![معاينة الداشبورد](docs/Sales%20Dashboard_page-0001.jpg)
+![Dashboard Preview](docs/Sales%20Dashboard_page-0001.jpg)
 
 ---
 
-## 📌 محتويات الملف
+## 📌 Table of Contents
 
-- [نظرة عامة](#نظرة-عامة)
-- [الـ Filters — عوامل التصفية](#الـ-filters)
-- [الـ KPI Cards — أهم الأرقام](#الـ-kpi-cards)
-- [تحليل الـ Visuals بالتفصيل](#تحليل-الـ-visuals)
-- [القصة الكاملة للداشبورد](#القصة-الكاملة)
-- [شرح الداشبورد في Interview](#الـ-interview)
-- [البيانات (Dataset)](#البيانات)
-- [هيكل المشروع](#هيكل-المشروع)
-- [طريقة التشغيل](#طريقة-التشغيل)
-- [المهارات](#المهارات)
-- [التقنيات](#التقنيات)
-- [خطة التطوير](#خطة-التطوير)
-- [الرخصة](#الرخصة)
-
----
-
-## 📖 نظرة عامة
-
-هذا الريبو يحوّل بيانات معاملات سوبر ماركت الخام إلى **داشبورد مبيعات** قابل للاستخدام، بيجاوب على أسئلة عمل رئيسية مثل:
-
-- إزاي **الإيرادات** و**الأرباح** بتتغير مع الوقت؟
-- أنهي **product lines** و**branches/cities** بتجيب أعلى مبيعات؟
-- إيه شكل **قاعدة العملاء** (النوع والجنس) وإزاي بيدفعوا؟
-
-**أهم جانب**: الداشبورد مش مجرد أرقام — الهدف منها إننا نطلع **Insights و Business Decisions**: مين أفضل فرع؟ إيه أفضل منتج؟ مين العملاء الأكثر قيمة؟ إمتى الطلب بيزيد؟ وإمتى المبيعات بتقع؟
+- [Overview](#overview)
+- [Filters & Slicers](#filters--slicers)
+- [KPI Cards — Key Metrics](#kpi-cards--key-metrics)
+- [Visual Walkthrough](#visual-walkthrough)
+- [Key Insights — The Story](#key-insights--the-story)
+- [Interview Script](#interview-script)
+- [Dataset](#dataset)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Skills Demonstrated](#skills-demonstrated)
+- [Technologies](#technologies)
+- [Roadmap](#roadmap)
+- [License](#license)
 
 ---
 
-## 🎛️ الـ Filters
+## 📖 Overview
 
-الجزء اللي على الشمال عبارة عن **Slicers / Filters**، ودي بتغير كل الـ Visuals في الداشبورد حسب اختيارك.
+This repository contains a complete business-intelligence project that transforms raw transaction-level supermarket sales data into an actionable **sales dashboard**. It answers key business questions such as:
+
+- How are **revenue** and **profit** trending over time?
+- Which **product lines** and **branches/cities** drive the most sales?
+- What does the **customer base** (type & gender) look like, and how do they pay?
+
+> **Most importantly**, the dashboard is not just about numbers — its goal is to surface **Insights and Business Decisions**: which branch performs best? Which product is the top seller? Who are the most valuable customers? When does demand peak? And when do sales drop?
+
+---
+
+## 🎛️ Filters & Slicers
+
+The panel on the left is made of **Slicers / Filters** that dynamically change every visual in the dashboard based on your selections.
 
 ### Branch
-- عندك: `Branch A`، `Branch B`، `Branch C`
-- لو اخترت مثلًا `Branch A`، كل الأرقام والرسومات بتتفلتر وتعرض بيانات `Branch A` فقط.
+- Options: `Branch A`, `Branch B`, `Branch C`
+- Selecting e.g. `Branch A` filters **all** KPIs and charts to show `Branch A` data only.
 
 ### Month
-- عندك: `January`، `February`، `March`
-- تقدر تشوف أداء المبيعات في شهر معين.
-- مثلًا لو اخترت `February`: `Total Sales` هيتغير ← `Product Sales` هتتغير ← `Sales by Day` هيتغير ← `Sales by Hour` هيتغير... إلخ.
+- Options: `January`, `February`, `March`
+- See sales performance for a specific month — e.g. selecting `February` updates `Total Sales`, `Sales by Day`, `Sales by Hour`, and so on.
 
 ### Payment
-- طرق الدفع: `Cash`، `Credit card`، `Ewallet`
-- بيدي فرصة تعرف: العملاء بيدفعوا إزاي؟ وتحلل مثلًا هل الـ `Credit card` بيحقق مبيعات أعلى من الـ `Cash`.
+- Methods: `Cash`, `Credit card`, `Ewallet`
+- Understand how customers pay and analyze whether `Credit card` drives higher sales than `Cash`.
 
 ### Gender
-- `Female` و `Male`
-- بيدي فرصة تحلل المبيعات حسب نوع العميل، مثلًا: هل الـ `Female` customers بيعملوا sales أكتر من الـ `Male`؟
+- `Female` and `Male`
+- Segment sales by customer gender — e.g. do female customers generate more sales than male?
 
 ---
 
-## 💎 الـ KPI Cards — أهم الأرقام
+## 💎 KPI Cards — Key Metrics
 
-الجزء العلوي بيدي **Executive Summary** سريع: لو المدير فتح الداشبورد يقدر في ثواني يعرف حالة المبيعات.
+The top section provides a quick **Executive Summary** so a manager can gauge sales health within seconds.
 
-| المقياس | القيمة | الشرح |
+| Metric | Value | Explanation |
 | --- | --- | --- |
-| **Total Sales** | **322.97K** | إجمالي قيمة المبيعات ≈ **322,970** خلال الفترة الموجودة في الداتا. |
-| **Total Margin** | **4.76%** | نسبة الربح: من كل 100 جنيه Sales، الشركة بتحقق ≈ **4.76 جنيه** Profit. |
-| **Total Profit** | **15.38K** | إجمالي الربح ≈ **15,380** = `Sales − COGS` = `322.97K − 307.59K`. |
-| **Total Sold Items** | **6K** | عدد المنتجات المباعة ≈ **6,000**. ده مش عدد الفواتير. |
-| **Total COGS** | **307.59K** | تكلفة المنتجات اللي اتباعت (Cost of Goods Sold) ≈ **307,590**. |
-| **Average Invoice Value** | **322.97** | متوسط قيمة الفاتورة = `Total Sales ÷ Number of Invoices` = `322.97K ÷ ~1K`. |
-| **Average Ratings** | **6.97** | متوسط تقييم المعاملات ≈ **7 من 10**. |
+| **Total Sales** | **322.97K** | Total sales value ≈ **322,970** over the dataset period. |
+| **Total Margin** | **4.76%** | Profit margin: for every 100 of Sales, the company earns ≈ **4.76** in Profit. |
+| **Total Profit** | **15.38K** | Total profit ≈ **15,380** = `Sales − COGS` = `322.97K − 307.59K`. |
+| **Total Sold Items** | **6K** | Total items sold ≈ **6,000** (this is *not* the number of invoices). |
+| **Total COGS** | **307.59K** | Cost of Goods Sold ≈ **307,590** — the cost of products sold. |
+| **Average Invoice Value** | **322.97** | Average invoice value = `Total Sales ÷ Number of Invoices` (`322.97K ÷ ~1K`). |
+| **Average Ratings** | **6.97** | Average transaction rating ≈ **7 out of 10**. |
 
-**ملاحظة تحليلية مهمة:** الـ Profit Margin منخفض نسبيًا (4.76%) مقارنة بحجم الـ Sales — ممكن يكون عندك مبيعات كبيرة لكن الـ Margin منخفض.
+**Analytical note:** The profit margin (4.76%) is relatively low compared to the volume of sales — a business can have large sales but a thin margin.
 
 ---
 
-## 🖼️ تحليل الـ Visuals
+## 🖼️ Visual Walkthrough
 
 ### 1. Total Sales by City 🗺️
-- دي الخريطة في أعلى المنتصف، بتوضح المبيعات حسب المدينة.
-- **حجم النقطة = حجم الـ Sales** (نقطة كبيرة ← sales أعلى).
-- بيساعدك تجاوب على أسئلة زي: أنهي مدينة بتحقق أكبر Sales؟ فين العملاء الأكثر شراءً؟ هل فيه مدينة محتاجة Marketing أكتر؟
+- Map in the top center showing sales by city.
+- **Bubble size = sales volume** (bigger bubble → higher sales).
+- Answers: which city generates the most sales? Where are the biggest spenders? Which city needs more marketing?
 
 ### 2. Sales By Branch 🍩
-- Donut Chart في الأعلى، عندك 3 فروع:
+- Donut chart comparing the three branches:
 
-| الفرع | المبيعات |
+| Branch | Sales |
 | --- | --- |
 | Branch C | **110.57K** |
 | Branch A | **106.2K** |
 | Branch B | **106.2K** |
-| **الإجمالي** | **≈ 322.97K** |
+| **Total** | **≈ 322.97K** |
 
-- **الاستنتاج:** `Branch C` هو الأعلى في المبيعات، بينما `A` و `B` قريبين جدًا من بعضهم — مفيش فرق ضخم لكن `C` هو الأفضل.
+- **Takeaway:** `Branch C` is the highest performer; `A` and `B` are very close — no huge gap, but `C` leads.
 
 ### 3. Sales By Customer Type 👥
-- تقسيم العملاء لنوعين:
+- Splits customers into two types:
 
-| النوع | المبيعات |
+| Type | Sales |
 | --- | --- |
 | Member | **164.22K** |
 | Normal | **158.74K** |
 
-- الـ `Members` بيحققوا مبيعات أعلى شوية من الـ `Normal` (≈ 50.8% مقابل 49.2%) والفرق بسيط.
-- **سؤال تحليلي:** هل الـ Membership فعلاً بيشجع العميل على الشراء؟ ده ممكن يكون عنوان لتحليل أعمق.
+- `Members` out-sell `Normal` customers slightly (≈ 50.8% vs 49.2%) — a small gap.
+- **Analytical question:** Does membership actually encourage more purchasing? A candidate for deeper analysis.
 
 ### 4. Top 6 Product Lines Sales 📊
-- Bar Chart في المنتصف، بيوضح مبيعات كل Product Line.
+- Bar chart of sales by product line.
 
-| Product Line | المبيعات تقريبًا |
+| Product Line | Approx. Sales |
 | --- | --- |
 | Food and beverages | **56K** |
 | Sports and travel | 55K |
@@ -121,124 +118,124 @@
 | Home and lifestyle | 54K |
 | Health and beauty | **49K** |
 
-- **الأعلى:** `Food and beverages` (56K) — **الأقل:** `Health and beauty` (49K).
-- الفرق بين أعلى وأقل product line مش كبير، يعني المبيعات موزعة بشكل متقارب نسبيًا.
+- **Highest:** `Food and beverages` (56K) — **Lowest:** `Health and beauty` (49K).
+- The range is narrow, so sales are fairly evenly distributed across product lines.
 
 ### 5. Rating by Product Line ⭐
-- هنا مش بنشوف sales — بنشوف **متوسط تقييم العملاء لكل Product Line**.
+- Shows **average customer rating per product line** (not sales).
 
 | Product Line | Rating |
 | --- | --- |
-| Food and beverages | **7.1** (الأعلى) |
+| Food and beverages | **7.1** (highest) |
 | Fashion accessories | 7.0 |
 | Health and beauty | 7.0 |
 | Electronic accessories | 6.9 |
 | Sports and travel | 6.9 |
-| Home and lifestyle | **6.8** (الأقل) |
+| Home and lifestyle | **6.8** (lowest) |
 
-- **تحليل مهم:** `Food and beverages` عنده أعلى Sales **وأعلى Rating** مع بعض.
-- `Health and beauty` Rating كويس (7.0) لكن Sales أقل — **ليه Product Line عنده Rating كويس لكن sales قليلة؟**
+- **Key insight:** `Food and beverages` has both the **highest sales and highest rating**.
+- `Health and beauty` rates well (7.0) but sells less — *why does a well-rated line under-sell?*
 
 ### 6. Rating by Branch 🌟
-- بيعمل مقارنة متوسط التقييم لكل فرع.
+- Compares the average rating per branch.
 
-| الفرع | Rating |
+| Branch | Rating |
 | --- | --- |
 | Branch C | **7.1** |
 | Branch A | 7.0 |
 | Branch B | 6.8–6.9 |
 
-- `Branch C` = أعلى Rating **وكمان** أعلى Sales، فبيرتبط بـ **Positive Performance Indicator**.
+- `Branch C` has the highest rating **and** the highest sales — a strong **positive performance indicator**.
 
 ### 7. Sales by Day 📅
-- Area/Line Chart بيوضح المبيعات حسب أيام الأسبوع.
+- Area/Line chart showing sales by day of the week.
 
-| اليوم | المبيعات تقريبًا |
+| Day | Approx. Sales |
 | --- | --- |
-| Saturday | **163K** (الأفضل) |
+| Saturday | **163K** (best) |
 | Tuesday | 158K |
 | Wednesday | 143K |
 | Friday | 139K |
 | Thursday | 138K |
 | Sunday | 133K |
-| Monday | **125K** (الأضعف) |
+| Monday | **125K** (weakest) |
 
-- **مهم:** الأيام مرتبة حسب قيمة المبيعات من الأعلى للأقل، مش بالترتيب الزمني.
-- **الاستخدام:** استعد بمخزون وموظفين أكبر قبل `Saturday`، وخطط لرفع المبيعات يوم `Monday`.
+- **Note:** days are ordered by sales value (highest → lowest), not chronologically.
+- **Action:** stock up and staff up before `Saturday`; plan promotions to lift `Monday`.
 
 ### 8. Top Sales Hours ⏰
-- المحور الأفقي: `Hour`، والمحور الرأسي: `Count of Invoice ID` — بنقيس **عدد الفواتير في كل ساعة**.
-- البيانات من **10 AM → 8 PM**، وأعلى Peak عند **7 PM** تقريبًا (أكبر عدد معاملات)، مع انخفاضات مثلًا عند **5 PM**.
-- **معلومة عملية:** تقدر تزوّد الموظفين والـ inventory وتعمل promotions في ساعة الذروة (7 PM).
+- X-axis: `Hour`, Y-axis: `Count of Invoice ID` — measures **number of invoices per hour**, not sales value.
+- Data spans **10 AM → 8 PM** with a clear peak at **7 PM** (highest transaction count) and dips (e.g. around **5 PM**).
+- **Action:** increase staff and inventory at the 7 PM peak; run targeted promotions; improve service during busy hours.
 
 ### 9. Sales by Month 📆
-| الشهر | المبيعات تقريبًا |
+| Month | Approx. Sales |
 | --- | --- |
-| January | **116K** (الأعلى) |
-| February | **97K** (الأقل) |
+| January | **116K** (highest) |
+| February | **97K** (lowest) |
 | March | **109K** |
 
-- **القصة:** `January` قوي 📈 ← `February` انخفاض واضح 📉 ← `March` تحسُّن/Recovery 📈 (لكن لسه أقل من January).
+- **Story:** January strong 📈 → February clear decline 📉 → March recovery 📈 (still below January).
 
 ---
 
-## 🧭 القصة الكاملة للداشبورد
+## 🧭 Key Insights — The Story
 
-لو جمعنا كل الرسومات مع بعض، الداشبورد بتحكي القصة دي:
+Putting all the visuals together, the dashboard tells this story:
 
-- 💰 **Sales:** الشركة حققت **322.97K** إجمالي مبيعات.
-- 💵 **Profit:** حققت **15.38K** ربح بهامش **4.76%** (منخفض نسبيًا).
-- 🏢 **Branch Performance:** `Branch C` هو الأفضل في Sales (**110.57K**) وكمان أعلى Rating.
-- 👥 **Customer Performance:** `Members` أعلى من `Normal` قليلًا (**164.22K** vs **158.74K**)، الفرق مش كبير.
-- 🛍️ **Product Performance:** أفضل product line هو `Food and beverages` (**56K**) والأقل `Health and beauty` (**49K**) مع فروقات محدودة.
-- ⭐ **Customer Satisfaction:** أفضل Rating = `Food and beverages` (**7.1**) والأقل `Home and lifestyle` (**6.8**).
-- 📅 **Time Analysis:** أفضل يوم `Saturday`، أضعف يوم `Monday`، وأعلى وقت عدد فواتير ≈ **7 PM**.
-- 📆 **Monthly Trend:** `January` الأفضل ← انخفاض قوي في `February` ← Recovery في `March`.
+- 💰 **Sales:** The company generated **322.97K** in total sales.
+- 💵 **Profit:** **15.38K** profit at a **4.76%** margin (relatively low).
+- 🏢 **Branch Performance:** `Branch C` is the best on sales (**110.57K**) and also has the highest rating.
+- 👥 **Customer Performance:** `Members` slightly out-sell `Normal` customers (**164.22K** vs **158.74K**).
+- 🛍️ **Product Performance:** Top product line `Food and beverages` (**56K**), lowest `Health and beauty` (**49K**), with limited variation.
+- ⭐ **Customer Satisfaction:** Best rating `Food and beverages` (**7.1**), lowest `Home and lifestyle` (**6.8**).
+- 📅 **Time Analysis:** Best day `Saturday`, weakest `Monday`, peak transaction hour ≈ **7 PM**.
+- 📆 **Monthly Trend:** `January` best → strong drop in `February` → `March` recovery.
 
 ---
 
-## 🎤 الـ Interview
+## 🎤 Interview Script
 
-لو هتشرح الداشبورد في مقابلة، تقدر تقول بشكل احترافي:
+A professional, concise summary you can say in an interview:
 
 > *"This dashboard provides an overview of the company's sales performance across branches, customer types, product lines, and time periods. The business generated around 322.97K in total sales with 15.38K in profit and a 4.76% profit margin. Branch C was the highest-performing branch in terms of sales and also had the highest customer rating. Food and beverages was the top-performing product line by sales and rating. From the time analysis, Saturday generated the highest sales, while Monday was the weakest day, and the highest transaction activity occurred around 7 PM. Monthly analysis showed that January had the highest sales, followed by a significant decline in February and a recovery in March."*
 
-**أهم حاجة:** الداشبورد مش هدفها تقول "Sales = 322K" وخلاص — الهدف إنك تطلع منها Insights و Business Decisions.
+**The key takeaway:** a dashboard isn't about stating "Sales = 322K" and stopping — it's about extracting **Insights** and driving **Business Decisions**.
 
 ---
 
-## 🗂️ البيانات (Dataset)
+## 🗂️ Dataset
 
-البيانات هي عينة **Supermarket Sales** عامة مشهورة: **3 شهور، 1,000 معاملة (يناير–مارس 2019)** تغطي 3 فروع في ميانمار.
+A widely-used public **Supermarket Sales** sample: **3 months, 1,000 transactions (Jan–Mar 2019)** covering three branches in Myanmar.
 
-| العمود | الوصف |
+| Column | Description |
 | --- | --- |
-| `Invoice ID` | معرف المعاملة |
-| `Branch` / `City` | موقع البيع |
-| `Customer type` | `Member` أو `Normal` |
-| `Gender` | جنس العميل |
-| `Product line` | فئة المنتج |
-| `Unit price` / `Quantity` | سعر الوحدة والكمية |
-| `Tax 5%` / `Total` | الضريبة والإجمالي |
-| `Date` / `Time` | توقيت المعاملة |
-| `Payment` | طريقة الدفع (`Cash`, `Credit card`, `Ewallet`) |
-| `cogs` / `gross income` | التكلفة والربح الإجمالي |
-| `gross margin percentage` | نسبة الهامش |
-| `Rating` | تقييم رضا العميل |
+| `Invoice ID` | Unique transaction identifier |
+| `Branch` / `City` | Location of the sale |
+| `Customer type` | `Member` or `Normal` |
+| `Gender` | Customer gender |
+| `Product line` | Product category |
+| `Unit price` / `Quantity` | Price per unit and quantity sold |
+| `Tax 5%` / `Total` | Tax and total amount |
+| `Date` / `Time` | Transaction timestamp |
+| `Payment` | Payment method (`Cash`, `Credit card`, `Ewallet`) |
+| `cogs` / `gross income` | Cost of goods and gross profit |
+| `gross margin percentage` | Margin percentage |
+| `Rating` | Customer satisfaction rating |
 
-**المصدر:** [Supermarket Sales — Kaggle](https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales)
+**Source:** [Supermarket Sales — Kaggle](https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales)
 
 ---
 
-## 🗃️ هيكل المشروع
+## 🗃️ Project Structure
 
 ```
 First-Sales-Dashboard/
-├── data/                             # البيانات الخام
+├── data/                             # Raw source data
 │   └── supermarket_sales.csv
-├── reports/                          # تقرير Power BI (قابل للتعديل)
+├── reports/                          # Interactive Power BI report (editable)
 │   └── Sales Dashboard.pbix
-├── docs/                             # الوثائق ومعاينة الداشبورد
+├── docs/                             # Documentation & dashboard preview
 │   └── Sales Dashboard_page-0001.jpg
 ├── README.md
 └── .gitignore
@@ -246,58 +243,61 @@ First-Sales-Dashboard/
 
 ---
 
-## 🚀 طريقة التشغيل
+## 🚀 Getting Started
 
-**المتطلبات:**
-- **Microsoft Power BI Desktop** (مجاني) لفتح وتعديل ملف `.pbix`.
+### Prerequisites
 
-**الخطوات:**
-1. استنسخ الريبو:
+- **Microsoft Power BI Desktop** (free) — to open & edit the `.pbix` file.
+
+### Run it
+
+1. Clone the repository:
    ```bash
    git clone https://github.com/<your-username>/First-Sales-Dashboard.git
    ```
-2. افتح **`reports/Sales Dashboard.pbix`** في Power BI Desktop.
-3. نموذج البيانات بيتحمّل تلقائيًا — من غير أي إعدادات إضافية.
-4. نافش مع الـ visuals، أو اطبع/صدّر إلى PDF.
+2. Open **`reports/Sales Dashboard.pbix`** with Power BI Desktop.
+3. The report and data model load automatically — no extra configuration needed.
+4. Interact with the visuals, or print/export to PDF.
 
-> عايز نظرة سريعة؟ افتح **`docs/Sales Dashboard_page-0001.jpg`**.
-
----
-
-## 🧠 المهارات
-
-- استيراد وتنظيف وتشكيل البيانات (Power Query)
-- بناء نموذج البيانات والعلاقات
-- مقاييس DAX للتجميعات والـ KPIs
-- تصميم تقارير تفاعلية وسرد القصة بالبيانات (*Storytelling with Data*)
-- تنسيق وتخطيط احترافي
+> Prefer a quick look? Open the **`docs/Sales Dashboard_page-0001.jpg`** preview.
 
 ---
 
-## 🛠️ التقنيات
+## 🧠 Skills Demonstrated
 
-| الأداة | الغرض |
+- Data import, cleaning & shaping (Power Query)
+- Data modeling & relationship design
+- DAX measures for aggregations & KPIs
+- Interactive report design & **storytelling with data**
+- Professional formatting & layout
+- Extracting actionable **insights & business decisions** from raw data
+
+---
+
+## 🛠️ Technologies
+
+| Tool | Purpose |
 | --- | --- |
-| **Power BI Desktop** | بناء النموذج والـ DAX والتصورات |
-| **Power Query (M)** | تحويل وتنظيف البيانات |
-| **DAX** | مقاييس مخصصة وأعمدة محسوبة |
-| **CSV** | مصدر البيانات الخام |
+| **Power BI Desktop** | Data modeling, DAX, and visualizations |
+| **Power Query (M)** | Data transformation & cleaning |
+| **DAX** | Custom measures & calculated columns |
+| **CSV** | Raw data source |
 
 ---
 
-## 🗺️ خطة التطوير
+## 🗺️ Roadmap
 
-- [ ] النشر على **Power BI Service** للمشاركة المباشرة
-- [ ] إضافة صفحة **Executive Summary**
-- [ ] صفحة **Drill-through** لتفاصيل كل product line
-- [ ] أتمتة تحديث البيانات عبر Gateway
-
----
-
-## 📄 الرخصة
-
-هذا المشروع **لأغراض تعليمية/بورتفوليو** ويستخدم بيانات عينة عامة.
+- [ ] Publish to the **Power BI Service** for live sharing
+- [ ] Add an **Executive Summary** page
+- [ ] Include a **Drill-through** page for product-line details
+- [ ] Automate dataset refresh via a gateway
 
 ---
 
-</div>
+## 📄 License
+
+This project is for **educational/portfolio purposes** and uses a publicly available sample dataset.
+
+---
+
+Made with ❤️ using **Microsoft Power BI**
