@@ -72,7 +72,6 @@ The dataset is a widely-used public **Supermarket Sales** sample (3 months, 1,00
 ```
 First-Sales-Dashboard/
 ├── Sales Dashboard.pbix              # Interactive Power BI report (editable)
-├── Sales Dashboard.pdf               # Exported static report
 ├── Sales Dashboard_page-0001.jpg     # Dashboard preview image
 └── supermarket_sales.csv             # Raw source data
 ```
@@ -95,7 +94,7 @@ First-Sales-Dashboard/
 3. The report and data model load automatically — no extra configuration needed.
 4. Interact with the visuals, or print/export to PDF.
 
-> Prefer a quick look? Open the **`Sales Dashboard.pdf`** or the **`.jpg` preview**.
+> Prefer a quick look? Open the **`Sales Dashboard_page-0001.jpg`** preview.
 
 ---
 
