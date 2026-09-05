@@ -1,6 +1,6 @@
 # Sales Dashboard - Supermarket Analysis
 
-<img src="https://raw.githubusercontent.com/A7MADTANTAWY/First-Sales-Dashboard/main/screenshots/dashboard_overview.jpg" alt="Dashboard Preview" width="1200">
+![Dashboard Preview](docs/Sales%20Dashboard_page-0001.jpg)
 
 Power BI sales dashboard built from a single supermarket transactions dataset for portfolio use.
 
@@ -68,6 +68,6 @@ First-Sales-Dashboard/
 │   └── supermarket_sales.csv
 ├── dashboard/
 │   └── supermarket_sales_dashboard.pbix
-└── screenshots/
-    └── dashboard_overview.jpg
+└── docs/
+    └── Sales Dashboard_page-0001.jpg
 ```
