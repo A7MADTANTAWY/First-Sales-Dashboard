@@ -1,6 +1,6 @@
 # Sales Dashboard - Supermarket Analysis
 
-![Dashboard Preview](https://raw.githubusercontent.com/A7MADTANTAWY/First-Sales-Dashboard/main/screenshots/dashboard_overview.jpg)
+![Dashboard Preview](screenshots/dashboard_overview.jpg)
 
 Power BI sales dashboard built from a single supermarket transactions dataset for portfolio use.
 
